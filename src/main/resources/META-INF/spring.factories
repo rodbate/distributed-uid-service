@@ -1,0 +1,4 @@
+
+#spring application run listener
+org.springframework.boot.SpringApplicationRunListener=\
+com.github.rodbate.uid.web.config.BootApplicationRunListener

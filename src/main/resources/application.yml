@@ -1,0 +1,57 @@
+
+app:
+  env: @app.env@
+
+spring:
+  application:
+    name: @app.name@
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    password: @redis.password@
+    cluster:
+      nodes: @redis.cluster.nodes@
+    lettuce:
+      pool:
+        min-idle: @redis.pool.min-idle@
+        max-idle: @redis.pool.max-idle@
+        max-active: @redis.pool.max-active@
+        max-wait: @redis.pool.max-wait@
+  data:
+    elasticsearch:
+      cluster-name: @elasticsearch.cluster.name@
+      cluster-nodes: @elasticsearch.cluster.nodes@
+
+
+server:
+  port: @web.server.port@
+
+
+logging:
+  config: @log.config.file@
+
+
+
+dist-id:
+  config:
+    step:
+      default: @dist-id.config.step.default@
+      cookie-id: @dist-id.config.step.cookie-id@
+
+
+cluster:
+  transport:
+    host: @cluster.transport.host@
+    port: @cluster.transport.port@
+
+
+
+#zk conf
+zookeeper:
+  client:
+    connect-string: @zookeeper.client.connect-string@
+    connection-timeout: @zookeeper.client.connection-timeout@
+    session-timeout: @zookeeper.client.session-timeout@
+
+
+
